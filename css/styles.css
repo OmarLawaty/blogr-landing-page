@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font: 400 16px 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body header,
+body main,
+body footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header {
+  background: url(/images/bg-pattern-intro.svg) 26% 52%/3200px auto no-repeat, -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: url(/images/bg-pattern-intro.svg) 26% 52%/3200px auto no-repeat, linear-gradient(to right, #ff8f70, #ff3d54);
+  padding-top: 58px;
+  min-height: 600px;
+  border-radius: 0 0 0 100px;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 9px 0 13px;
+  height: 50px;
+}
+
+body header nav .header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  min-width: 400px;
+}
+
+body header nav .header-info .nav-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 67.5%;
+  margin-right: 7px;
+}
+
+body header nav .header-info .nav-options .ui.dropdown .menu {
+  left: -7px;
+  top: 47px;
+  width: 168px;
+  height: auto;
+}
+
+body header nav .header-info .nav-options .header-nav:hover .nav-item {
+  text-decoration: underline;
+}
+
+body header nav .header-info .nav-options .header-nav:hover .nav-item .dropdown.icon {
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body header nav .header-info .nav-options .header-nav .nav-item {
+  color: #fff;
+  min-width: 100px;
+}
+
+body header nav .header-info .nav-options .header-nav .nav-item .dropdown.icon {
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  text-decoration: none;
+  height: auto;
+}
+
+body header nav .account-creation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 240px;
+}
+
+body header nav .account-creation button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 133px;
+  height: 100%;
+}
+
+body header nav .account-creation .login-button {
+  width: 100px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+body header nav .account-creation .login-button:hover {
+  background-color: #fff;
+  color: #ff3d54;
+}
+
+body header nav .account-creation .signup-button {
+  border-radius: 25px;
+  background-color: #fff;
+  color: #ff3d54;
+}
+
+body header nav .account-creation .signup-button:hover {
+  background-color: #ff7a85;
+  color: #fff;
+}
+
+body header .bloger-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 440px;
+  color: #fff;
+}
+
+body header .bloger-intro h1 {
+  margin: 126px 0 14px;
+  font: 700 61px 'overpass', sans-serif;
+  letter-spacing: -0.6px;
+}
+
+body header .bloger-intro p {
+  font: 400 20px 'overpass', sans-serif;
+  margin-bottom: 44px;
+}
+
+body header .bloger-intro .get-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 26%;
+  height: 50px;
+}
+
+body header .bloger-intro .get-info .start-for-free {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  border-radius: 25px;
+  font-size: 18px;
+  padding: 0;
+  background-color: #fff;
+  color: #ff3d54;
+}
+
+body header .bloger-intro .get-info .start-for-free:hover {
+  background-color: #ff7a85;
+  color: #fff;
+}
+
+body header .bloger-intro .get-info .learn-more {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  border-radius: 25px;
+  font-size: 18px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+body header .bloger-intro .get-info .learn-more:hover {
+  background-color: #fff;
+  color: #ff3d54;
+}
+/*# sourceMappingURL=styles.css.map */
