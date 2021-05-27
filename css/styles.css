@@ -348,6 +348,7 @@ main .section2 .Infrastructure-State .features p {
 main .section3 {
   height: 880px;
   width: 100%;
+  margin-bottom: 36px;
 }
 
 main .section3 .tools {
@@ -413,5 +414,49 @@ main .section3 .tools .content > div h3 {
 main .section3 .tools .content > div p {
   line-height: 28px;
   letter-spacing: 0.3px;
+}
+
+footer {
+  background-color: #25252d;
+  border-radius: 0 100px 0 0;
+  color: #fff;
+  font-weight: 500;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 67%;
+  margin: 72px 205px 0 0;
+  gap: 20px;
+}
+
+footer .wrapper .footer-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .wrapper .footer-options p {
+  margin-bottom: 36px;
+}
+
+footer .wrapper .footer-options span {
+  display: block;
+  margin-bottom: 14px;
+  color: #c8c8cb;
+  cursor: pointer;
+}
+
+footer .wrapper .footer-options span:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */
