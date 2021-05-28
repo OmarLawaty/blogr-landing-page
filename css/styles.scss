@@ -37,7 +37,7 @@ body {
     top: 47px;
     width: 168px;
     height: auto;
-    padding: 18px 6px;
+    padding: 18px 0px;
   }
 
   header,
@@ -64,94 +64,98 @@ header {
     margin: 0px 9px 0 13px;
     height: 50px;
 
-    .header-logo {
-      flex: 1 1 150px;
+    .humburger {
+      display: none;
+      cursor: pointer;
     }
 
-    .header-info {
+    .options {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      width: 45%;
-      min-width: 400px;
-      flex: 1 2 340px;
+      width: 86%;
 
-      .nav-options {
+      .header-info {
         display: flex;
         justify-content: space-between;
-        width: 67.5%;
-        margin-right: 7px;
+        align-items: center;
+        width: 52%;
+        min-width: 400px;
 
-        .ui.dropdown .menu {
-          left: -7px;
-          top: 47px;
-          width: 168px;
-          height: auto;
-        }
+        .nav-options {
+          display: flex;
+          justify-content: space-between;
+          width: 67.5%;
+          margin-right: 7px;
 
-        .header-nav {
-          &:hover {
+          .ui.dropdown .menu {
+            left: -7px;
+            top: 47px;
+            width: 168px;
+            height: auto;
+          }
+
+          .header-nav {
+            &.active.visible {
+              .nav-item {
+                text-decoration: underline;
+
+                .dropdown.icon {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+
             .nav-item {
-              text-decoration: underline;
+              color: #fff;
+              min-width: 100px;
 
               .dropdown.icon {
-                transition: all 0.4s ease-in;
-                transform: rotate(180deg);
+                transition: all 0.4s ease-out;
+                text-decoration: none;
+                height: auto;
               }
             }
           }
+        }
+      }
 
-          .nav-item {
-            color: #fff;
-            min-width: 100px;
+      .account-creation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 240px;
 
-            .dropdown.icon {
-              transition: all 0.4s ease-out;
-              text-decoration: none;
-              height: auto;
-            }
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 133px;
+          height: 100%;
+        }
+
+        .login-button {
+          width: 100px;
+          border-radius: 25px;
+
+          background-color: transparent;
+          color: #fff;
+
+          &:hover {
+            border: 1px solid #fff;
+            background-color: transparent;
+            color: hsl(353, 100%, 62%);
           }
         }
-      }
-    }
 
-    .account-creation {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 240px;
-      flex: 1 1 240px;
-
-      button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 133px;
-        height: 100%;
-      }
-
-      .login-button {
-        width: 100px;
-        border-radius: 25px;
-
-        background-color: transparent;
-        color: #fff;
-
-        &:hover {
-          border: 1px solid #fff;
-          background-color: transparent;
+        .signup-button {
+          border-radius: 25px;
+          background-color: #fff;
           color: hsl(353, 100%, 62%);
-        }
-      }
 
-      .signup-button {
-        border-radius: 25px;
-        background-color: #fff;
-        color: hsl(353, 100%, 62%);
-
-        &:hover {
-          background-color: hsl(355, 100%, 74%);
-          color: #fff;
+          &:hover {
+            background-color: hsl(355, 100%, 74%);
+            color: #fff;
+          }
         }
       }
     }
@@ -399,6 +403,10 @@ footer {
 }
 
 @media (max-width: 1000px) {
+  .ui.container .options .header-info .nav-options .header-nav:hover .nav-item {
+    text-decoration: none !important;
+  }
+
   header {
     min-height: unset;
     text-align: center;
@@ -409,18 +417,177 @@ footer {
 
     .ui.container {
       nav {
+        position: relative;
         margin: 0;
-        .nav-options,
-        .account-creation {
+        padding: 8px 8px 0;
+        align-items: center;
+
+        .header-logo {
+          width: 25%;
+        }
+
+        .humburger {
+          position: relative;
+          display: block;
+          animation: navClose 0.6s ease 1;
+        }
+
+        .options {
           display: none;
         }
-        .header-info {
-          min-width: unset;
-          width: initial;
 
-          .header-logo {
-            min-width: 82px;
-            margin-left: 8px;
+        @keyframes optionsSlide {
+          0% {
+            top: -100px;
+          }
+
+          50% {
+            top: 0px;
+          }
+
+          100% {
+            top: calc(100% + 26px);
+          }
+        }
+
+        @keyframes navOpen {
+          0% {
+            top: -100px;
+          }
+
+          100% {
+            top: 0;
+          }
+        }
+
+        @keyframes navClose {
+          0% {
+            transform: rotate(180deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        &.open {
+          .humburger {
+            display: block;
+            animation: navOpen 0.6s ease 1;
+          }
+
+          .options {
+            animation: slide 0.3s ease 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: center;
+            position: absolute;
+            top: calc(100% + 26px);
+            left: 50%;
+            width: 95%;
+            height: max-content;
+            max-height: 800px;
+            background-color: #fff;
+            transform: translate(-50%);
+            border-radius: 5px;
+
+            .header-info {
+              flex-direction: column;
+              width: 84%;
+              min-width: unset;
+              border-bottom: 1px solid hsl(240, 2%, 79%);
+              padding-bottom: 22px;
+
+              .header-logo {
+                min-width: 82px;
+                margin-left: 8px;
+              }
+
+              .nav-options {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+
+                .ui.dropdown .menu {
+                  position: initial;
+                  width: 100%;
+                  margin-top: 23px;
+                  background-color: hsla(240, 2%, 79%, 0.3);
+                  box-shadow: unset;
+                  border: unset;
+
+                  & > .item {
+                    text-align: center;
+                    padding: 12px 8px 12px 12px !important;
+                    letter-spacing: 0px;
+                    color: #4b5862;
+                    font-weight: 600;
+                    font-family: 'ubuntu', sans-sreif;
+                    font-size: 15px;
+                  }
+                }
+
+                .header-nav {
+                  width: 100%;
+                  text-align: center;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+
+                  &.active.visible {
+                    .nav-item {
+                      text-decoration: none;
+                      color: hsl(207, 13%, 34%);
+                    }
+                  }
+
+                  .nav-item {
+                    color: hsl(208, 49%, 24%);
+                    min-width: 100px;
+                    padding: 33px 0 0px 19.1px;
+                    letter-spacing: 1.2px;
+                    font-weight: 600;
+                    font-family: 'ubuntu', sans-sreif;
+
+                    .dropdown.icon {
+                      transition: all 0.4s ease-out;
+                      text-decoration: none;
+                      height: auto;
+                    }
+                  }
+                }
+              }
+            }
+
+            .account-creation {
+              flex-direction: column;
+              margin: 20px 0 33px;
+              gap: 7px;
+
+              button {
+                font-size: 16px;
+                font-weight: 700;
+              }
+
+              .login-button {
+                border: 1px solid transparent;
+                font-family: 'overpass', sans-serif;
+                color: hsl(208, 49%, 24%);
+              }
+
+              .signup-button {
+                height: 48px;
+                width: 137px;
+                margin-left: 4px;
+                color: #fff;
+                background: linear-gradient(
+                  to right,
+                  hsl(13, 100%, 72%),
+                  hsl(353, 100%, 62%)
+                );
+              }
+            }
           }
         }
       }

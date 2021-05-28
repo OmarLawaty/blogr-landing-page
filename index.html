@@ -39,8 +39,9 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS and JS -->
     <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js" defer></script>
     <title>Blogr</title>
   </head>
   <body>
@@ -50,52 +51,57 @@
           <div class="header-logo">
             <img src="./images/logo.svg" alt="" />
           </div>
-          <div class="header-info">
-            <div class="nav-options">
-              <div class="ui right dropdown item header-nav">
-                <div class="nav-item">
-                  Product
-                  <i class="dropdown icon"></i>
+          <div class="humburger">
+            <img src="/images/icon-hamburger.svg" alt="" class="nav-toggler" />
+          </div>
+          <div class="options">
+            <div class="header-info">
+              <div class="nav-options">
+                <div class="ui right dropdown item header-nav">
+                  <div class="nav-item">
+                    Product
+                    <i class="dropdown icon"></i>
+                  </div>
+                  <div class="menu header-nav-options">
+                    <span class="item">Overview</span>
+                    <span class="item">Pricing</span>
+                    <span class="item">Marketplace</span>
+                    <span class="item">Features</span>
+                    <span class="item">Integrations</span>
+                  </div>
                 </div>
-                <div class="menu header-nav-options">
-                  <span class="item">Overview</span>
-                  <span class="item">Pricing</span>
-                  <span class="item">Marketplace</span>
-                  <span class="item">Features</span>
-                  <span class="item">Integrations</span>
-                </div>
-              </div>
 
-              <div class="ui right dropdown item header-nav">
-                <div class="nav-item">
-                  Company
-                  <i class="dropdown icon"></i>
+                <div class="ui right dropdown item header-nav">
+                  <div class="nav-item">
+                    Company
+                    <i class="dropdown icon"></i>
+                  </div>
+                  <div class="menu header-nav-options">
+                    <span class="item">About</span>
+                    <span class="item">Team</span>
+                    <span class="item">Blog</span>
+                    <span class="item">Careers</span>
+                  </div>
                 </div>
-                <div class="menu header-nav-options">
-                  <span class="item">About</span>
-                  <span class="item">Team</span>
-                  <span class="item">Blog</span>
-                  <span class="item">Careers</span>
-                </div>
-              </div>
 
-              <div class="ui right dropdown item header-nav">
-                <div class="nav-item">
-                  Connect
-                  <i class="dropdown icon"></i>
-                </div>
-                <div class="menu header-nav-options">
-                  <span class="item">Contact</span>
-                  <span class="item">Newsletter</span>
-                  <span class="item">LinkedIn</span>
+                <div class="ui right dropdown item header-nav">
+                  <div class="nav-item">
+                    Connect
+                    <i class="dropdown icon"></i>
+                  </div>
+                  <div class="menu header-nav-options">
+                    <span class="item">Contact</span>
+                    <span class="item">Newsletter</span>
+                    <span class="item">LinkedIn</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="account-creation">
-            <button class="login-button ui button">Login</button>
-            <button class="signup-button ui button">Sign Up</button>
+            <div class="account-creation">
+              <button class="login-button ui button">Login</button>
+              <button class="signup-button ui button">Sign Up</button>
+            </div>
           </div>
         </nav>
         <div class="bloger-intro">
@@ -232,8 +238,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      $('.ui.dropdown').dropdown({ on: 'hover' });
-    </script>
   </body>
 </html>
