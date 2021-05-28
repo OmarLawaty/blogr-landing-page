@@ -47,10 +47,10 @@
     <header>
       <div class="ui container">
         <nav>
+          <div class="header-logo">
+            <img src="./images/logo.svg" alt="" />
+          </div>
           <div class="header-info">
-            <div class="header-logo">
-              <img src="./images/logo.svg" alt="" />
-            </div>
             <div class="nav-options">
               <div class="ui right dropdown item header-nav">
                 <div class="nav-item">
@@ -114,6 +114,10 @@
         <div class="ui container future-design">
           <h2>Designed for the future</h2>
 
+          <div class="illustration-editor">
+            <img src="/images/illustration-editor-mobile.svg" alt="" />
+          </div>
+
           <div class="design-capabilities">
             <div class="intro">
               <h3>Introducing an extensible editor</h3>
@@ -159,12 +163,17 @@
 
       <section class="section3">
         <div class="tools">
-          <div class="laptop-image">
-            <img src="/images/illustration-laptop-desktop.svg" alt="" />
-          </div>
+          <picture class="laptop-image">
+            <source
+              media="(min-width: 1001px)"
+              srcset="/images/illustration-laptop-desktop.svg"
+            />
+            <img src="/images/illustration-laptop-mobile.svg" alt="" />
+          </picture>
+
           <div class="content">
             <div>
-              <div class="summary">
+              <div class="summary sec3-component">
                 <h3>Free, open, simple</h3>
                 <p>
                   Blogr is a free and open source application backed by a large
@@ -176,7 +185,7 @@
                 </p>
               </div>
 
-              <div class="power-of-tools">
+              <div class="power-of-tools sec3-component">
                 <h3>Powerful tooling</h3>
                 <p>
                   Batteries included. We built a simple and straightforward CLI

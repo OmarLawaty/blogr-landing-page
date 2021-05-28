@@ -27,6 +27,19 @@ body {
   margin: 0;
   padding: 0;
 
+  // Semantic UI styles
+  .header-info .nav-options .menu.header-nav-options .item {
+    padding: 0;
+  }
+
+  header nav .header-info .nav-options .ui.dropdown .menu {
+    left: -23px;
+    top: 47px;
+    width: 168px;
+    height: auto;
+    padding: 18px 6px;
+  }
+
   header,
   main,
   footer {
@@ -43,6 +56,7 @@ header {
   padding-top: 58px;
   min-height: 600px;
   border-radius: 0 0 0 100px;
+  font-family: ' overpass ', sans-serif;
 
   nav {
     display: flex;
@@ -50,12 +64,17 @@ header {
     margin: 0px 9px 0 13px;
     height: 50px;
 
+    .header-logo {
+      flex: 1 1 150px;
+    }
+
     .header-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 45%;
       min-width: 400px;
+      flex: 1 2 340px;
 
       .nav-options {
         display: flex;
@@ -101,6 +120,7 @@ header {
       align-items: center;
       justify-content: space-between;
       width: 240px;
+      flex: 1 1 240px;
 
       button {
         display: flex;
@@ -115,11 +135,11 @@ header {
         border-radius: 25px;
 
         background-color: transparent;
-        border: 1px solid #fff;
         color: #fff;
 
         &:hover {
-          background-color: #fff;
+          border: 1px solid #fff;
+          background-color: transparent;
           color: hsl(353, 100%, 62%);
         }
       }
@@ -195,10 +215,10 @@ header {
 main {
   .section1 {
     background: url(/images/illustration-editor-desktop.svg) no-repeat
-      calc(100% + 275px) -223%;
+      calc(100% + 275px) 98%;
+    min-height: 955px;
+    margin-bottom: 55px;
     width: 100%;
-    min-height: 850px;
-    margin-bottom: 159px;
 
     .ui.container {
       display: grid;
@@ -206,6 +226,10 @@ main {
       grid-template-rows: 2fr 6fr;
       grid-gap: 10px;
       font-family: ' overpass ', sans-serif;
+
+      .illustration-editor {
+        display: none;
+      }
 
       h2 {
         grid-column: 1/4;
@@ -306,6 +330,7 @@ main {
       }
 
       .content {
+        font-family: ' overpass ', sans-serif;
         width: 49%;
         display: flex;
         flex-direction: column;
@@ -315,18 +340,20 @@ main {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          width: 73%;
+          width: 75%;
           gap: 71px;
           margin-bottom: 75px;
 
           h3 {
             font-size: 29px;
             margin: 0 0 28px 0px;
+            color: hsl(208, 49%, 24%);
           }
 
           p {
             line-height: 28px;
             letter-spacing: 0.3px;
+            color: hsl(207, 13%, 34%);
           }
         }
       }
@@ -343,14 +370,16 @@ footer {
   .wrapper {
     display: flex;
     justify-content: space-between;
-    width: 67%;
-    margin: 72px 205px 0 0;
-    gap: 20px;
+    width: 77%;
+    gap: 196px;
+    margin-right: 175px;
+    padding: 73px 9px 66px 0;
+
+    .footer-logo {
+      min-width: 100px;
+    }
 
     .footer-options {
-      display: flex;
-      flex-direction: column;
-
       p {
         margin-bottom: 36px;
       }
@@ -364,6 +393,270 @@ footer {
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    min-height: unset;
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 0 0 0 100px;
+    background: url(/images/bg-pattern-intro.svg) 38.5% 38.5%/1700px no-repeat,
+      linear-gradient(to bottom, #ff8f70, #ff3d54);
+
+    .ui.container {
+      nav {
+        margin: 0;
+        .nav-options,
+        .account-creation {
+          display: none;
+        }
+        .header-info {
+          min-width: unset;
+          width: initial;
+
+          .header-logo {
+            min-width: 82px;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .bloger-intro {
+        height: unset;
+        margin-bottom: 105px;
+
+        h1 {
+          margin-top: 100px;
+          width: 90%;
+          font-size: 35px;
+        }
+
+        p {
+          font-size: 18px;
+          width: 90%;
+          margin-bottom: 45px;
+        }
+
+        .get-info {
+          width: 84%;
+          gap: 18px;
+          height: 50px;
+
+          button {
+            border-radius: 50px;
+            margin: 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .section1 {
+      margin-bottom: 268px;
+      background: none;
+      text-align: center;
+
+      .ui.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        .illustration-editor {
+          display: block;
+          width: 100%;
+          margin: 49px 0 53px;
+
+          img {
+            height: 118%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        h2 {
+          margin-top: 102px;
+          font: 500 26px ' overpass ', sans-serif;
+          letter-spacing: 0.4px;
+        }
+
+        .design-capabilities {
+          align-items: center;
+          text-align: center;
+          gap: 0;
+
+          .intro,
+          .content-management {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+              margin: 44px 0 2px 10px;
+              font-size: 26px;
+              letter-spacing: 0.9px;
+              line-height: 32px;
+              width: 90%;
+            }
+
+            p {
+              font-size: 17px;
+              letter-spacing: 0.1px;
+              line-height: 28px;
+              width: 94%;
+              margin: 13px 0 0 9px;
+              text-align: center;
+            }
+          }
+
+          .content-management {
+            h3 {
+              margin: 44px 0 2px 10px;
+            }
+
+            p {
+              margin-top: 20px;
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+    .section2 {
+      background: url(/images/bg-pattern-circles.svg) no-repeat -110px -235px/600px,
+        linear-gradient(to right, #2c2d3f, #3f4164);
+      height: unset;
+      margin-bottom: 59px;
+
+      .Infrastructure-State {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        margin-bottom: 60px;
+
+        .phones-img {
+          min-width: unset;
+          margin: 0;
+          width: 109%;
+          position: absolute;
+          top: -185px;
+          max-width: 382px;
+        }
+
+        .features {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin: 0 0 18px 0;
+          letter-spacing: 0px;
+          text-align: center;
+
+          h2 {
+            margin: 221px 0 22px 0px;
+            letter-spacing: -0.2px;
+            line-height: 50px;
+          }
+
+          p {
+            text-align: center;
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    .section3 {
+      margin-bottom: 19px;
+      height: inherit;
+      .tools {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+
+        .laptop-image {
+          display: block;
+          align-items: unset;
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          margin-bottom: 122px;
+
+          img {
+            object-fit: cover;
+            object-position: center;
+            height: 133%;
+          }
+        }
+
+        .content {
+          flex-direction: column;
+          width: 100%;
+          div {
+            width: 100%;
+            gap: 0;
+
+            .sec3-component {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+
+              h3 {
+                letter-spacing: -0.2px;
+                margin-left: 4.8px;
+                margin-bottom: 21px;
+              }
+
+              p {
+                letter-spacing: 0.3px;
+                margin-left: 9.5px;
+                width: 85.5%;
+                line-height: 29px;
+              }
+            }
+
+            .summary {
+              margin-bottom: 62px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .wrapper {
+      flex-direction: column;
+      gap: 0;
+      justify-content: unset;
+      margin: 0;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+
+      .footer-logo {
+        width: 27%;
+        margin: 0 0 74px 10px;
+      }
+
+      .footer-options {
+        letter-spacing: 0.7px;
+        margin: 0 0 35px 12px;
+      }
+
+      & > div {
+        width: 105px;
       }
     }
   }
