@@ -27,7 +27,6 @@ body {
   margin: 0;
   padding: 0;
 
-  // Semantic UI styles
   .header-info .nav-options .menu.header-nav-options .item {
     padding: 0;
   }
@@ -61,8 +60,14 @@ header {
   nav {
     display: flex;
     justify-content: space-between;
-    margin: 0px 9px 0 13px;
+    padding: 0px 0 0 10px;
     height: 50px;
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .humburger {
       display: none;
@@ -80,6 +85,7 @@ header {
         align-items: center;
         width: 52%;
         min-width: 400px;
+        margin-top: 3px;
 
         .nav-options {
           display: flex;
@@ -88,10 +94,23 @@ header {
           margin-right: 7px;
 
           .ui.dropdown .menu {
-            left: -7px;
+            left: -23px;
             top: 47px;
             width: 168px;
             height: auto;
+            padding-left: 22px;
+            padding-top: 21px;
+
+            & > .item {
+              font-weight: 300;
+              font-family: 'ubuntu', sans-sreif;
+              letter-spacing: 0.8px;
+
+              &:hover {
+                background-color: transparent;
+                font-weight: 600;
+              }
+            }
           }
 
           .header-nav {
@@ -106,8 +125,11 @@ header {
             }
 
             .nav-item {
+              font-family: 'ubuntu', sans-sreif;
+              font-weight: 600;
               color: #fff;
               min-width: 100px;
+              text-align: center;
 
               .dropdown.icon {
                 transition: all 0.4s ease-out;
@@ -115,6 +137,10 @@ header {
                 height: auto;
               }
             }
+          }
+
+          .menu.header-nav-options .item {
+            padding: 10px 0 !important;
           }
         }
       }
@@ -124,6 +150,7 @@ header {
         align-items: center;
         justify-content: space-between;
         width: 240px;
+        margin-right: 6px;
 
         button {
           display: flex;
@@ -131,11 +158,13 @@ header {
           align-items: center;
           width: 133px;
           height: 100%;
+          margin: 0;
         }
 
         .login-button {
           width: 100px;
           border-radius: 25px;
+          font-size: 16px;
 
           background-color: transparent;
           color: #fff;
@@ -143,7 +172,6 @@ header {
           &:hover {
             border: 1px solid #fff;
             background-color: transparent;
-            color: hsl(353, 100%, 62%);
           }
         }
 
@@ -151,6 +179,9 @@ header {
           border-radius: 25px;
           background-color: #fff;
           color: hsl(353, 100%, 62%);
+          width: 135px;
+          font-family: 'ubuntu', sans-sreif;
+          font-size: 16px;
 
           &:hover {
             background-color: hsl(355, 100%, 74%);
@@ -183,9 +214,14 @@ header {
       display: flex;
       width: 26%;
       height: 50px;
+      gap: 17px;
+
+      button {
+        width: 136px;
+        margin: 0;
+      }
 
       .start-for-free {
-        flex: 1 1 50%;
         border-radius: 25px;
         font-size: 18px;
         padding: 0;
@@ -199,7 +235,6 @@ header {
       }
 
       .learn-more {
-        flex: 1 1 50%;
         border-radius: 25px;
         font-size: 18px;
         padding: 0;
@@ -349,12 +384,15 @@ main {
           margin-bottom: 75px;
 
           h3 {
+            font-family: 'ubuntu', sans-sreif;
             font-size: 29px;
             margin: 0 0 28px 0px;
             color: hsl(208, 49%, 24%);
+            letter-spacing: -1.2px;
           }
 
           p {
+            font-family: 'ubuntu', sans-sreif;
             line-height: 28px;
             letter-spacing: 0.3px;
             color: hsl(207, 13%, 34%);
@@ -374,28 +412,35 @@ footer {
   .wrapper {
     display: flex;
     justify-content: space-between;
-    width: 77%;
-    gap: 196px;
-    margin-right: 175px;
+    width: 79%;
+    gap: 185px;
     padding: 73px 9px 66px 0;
 
     .footer-logo {
       min-width: 100px;
+      margin-left: 13px;
     }
 
-    .footer-options {
-      p {
-        margin-bottom: 36px;
-      }
+    .footer-items {
+      display: flex;
+      width: 57.6%;
+      justify-content: space-between;
+      margin-right: 178.7px;
 
-      span {
-        display: block;
-        margin-bottom: 14px;
-        color: hsl(240, 2%, 79%);
-        cursor: pointer;
+      .footer-options {
+        p {
+          margin-bottom: 36px;
+        }
 
-        &:hover {
-          text-decoration: underline;
+        span {
+          display: block;
+          margin-bottom: 14px;
+          color: hsl(240, 2%, 79%);
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -419,7 +464,7 @@ footer {
       nav {
         position: relative;
         margin: 0;
-        padding: 8px 8px 0;
+        padding: 0px 8px 0;
         align-items: center;
 
         .header-logo {
@@ -516,6 +561,7 @@ footer {
                   background-color: hsla(240, 2%, 79%, 0.3);
                   box-shadow: unset;
                   border: unset;
+                  padding-left: 0;
 
                   & > .item {
                     text-align: center;
@@ -543,12 +589,12 @@ footer {
                   }
 
                   .nav-item {
+                    font-family: 'ubuntu', sans-sreif;
+                    font-weight: 600;
                     color: hsl(208, 49%, 24%);
                     min-width: 100px;
-                    padding: 33px 0 0px 19.1px;
+                    padding: 31px 0 0px 19.1px;
                     letter-spacing: 1.2px;
-                    font-weight: 600;
-                    font-family: 'ubuntu', sans-sreif;
 
                     .dropdown.icon {
                       transition: all 0.4s ease-out;
@@ -610,13 +656,14 @@ footer {
 
         .get-info {
           width: 84%;
-          gap: 18px;
+          gap: 17px;
           height: 50px;
 
           button {
             border-radius: 50px;
             margin: 0;
             font-size: 16px;
+            letter-spacing: 0.7px;
           }
         }
       }
@@ -769,9 +816,11 @@ footer {
         .content {
           flex-direction: column;
           width: 100%;
+
           div {
             width: 100%;
             gap: 0;
+            margin-bottom: 40px;
 
             .sec3-component {
               display: flex;
@@ -780,21 +829,20 @@ footer {
               text-align: center;
 
               h3 {
-                letter-spacing: -0.2px;
                 margin-left: 4.8px;
-                margin-bottom: 21px;
+                margin-bottom: 24.5px;
               }
 
               p {
-                letter-spacing: 0.3px;
+                letter-spacing: 0.4px;
                 margin-left: 9.5px;
-                width: 85.5%;
-                line-height: 29px;
+                width: 86.7%;
+                line-height: 28px;
               }
             }
 
             .summary {
-              margin-bottom: 62px;
+              margin-bottom: 36px;
             }
           }
         }
@@ -817,13 +865,19 @@ footer {
         margin: 0 0 74px 10px;
       }
 
-      .footer-options {
-        letter-spacing: 0.7px;
-        margin: 0 0 35px 12px;
-      }
+      .footer-items {
+        flex-direction: column;
+        margin-right: 0;
+        align-items: center;
 
-      & > div {
-        width: 105px;
+        .footer-options {
+          letter-spacing: 0.7px;
+          margin: 0 0 35px 12px;
+        }
+
+        & > div {
+          width: 105px;
+        }
       }
     }
   }

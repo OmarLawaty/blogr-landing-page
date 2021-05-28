@@ -73,8 +73,20 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 9px 0 13px;
+  padding: 0px 0 0 10px;
   height: 50px;
+}
+
+header nav .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header nav .humburger {
@@ -104,6 +116,7 @@ header nav .options .header-info {
           align-items: center;
   width: 52%;
   min-width: 400px;
+  margin-top: 3px;
 }
 
 header nav .options .header-info .nav-options {
@@ -118,10 +131,23 @@ header nav .options .header-info .nav-options {
 }
 
 header nav .options .header-info .nav-options .ui.dropdown .menu {
-  left: -7px;
+  left: -23px;
   top: 47px;
   width: 168px;
   height: auto;
+  padding-left: 22px;
+  padding-top: 21px;
+}
+
+header nav .options .header-info .nav-options .ui.dropdown .menu > .item {
+  font-weight: 300;
+  font-family: 'ubuntu', sans-sreif;
+  letter-spacing: 0.8px;
+}
+
+header nav .options .header-info .nav-options .ui.dropdown .menu > .item:hover {
+  background-color: transparent;
+  font-weight: 600;
 }
 
 header nav .options .header-info .nav-options .header-nav.active.visible .nav-item {
@@ -134,8 +160,11 @@ header nav .options .header-info .nav-options .header-nav.active.visible .nav-it
 }
 
 header nav .options .header-info .nav-options .header-nav .nav-item {
+  font-family: 'ubuntu', sans-sreif;
+  font-weight: 600;
   color: #fff;
   min-width: 100px;
+  text-align: center;
 }
 
 header nav .options .header-info .nav-options .header-nav .nav-item .dropdown.icon {
@@ -143,6 +172,10 @@ header nav .options .header-info .nav-options .header-nav .nav-item .dropdown.ic
   transition: all 0.4s ease-out;
   text-decoration: none;
   height: auto;
+}
+
+header nav .options .header-info .nav-options .menu.header-nav-options .item {
+  padding: 10px 0 !important;
 }
 
 header nav .options .account-creation {
@@ -156,6 +189,7 @@ header nav .options .account-creation {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 240px;
+  margin-right: 6px;
 }
 
 header nav .options .account-creation button {
@@ -170,11 +204,13 @@ header nav .options .account-creation button {
           align-items: center;
   width: 133px;
   height: 100%;
+  margin: 0;
 }
 
 header nav .options .account-creation .login-button {
   width: 100px;
   border-radius: 25px;
+  font-size: 16px;
   background-color: transparent;
   color: #fff;
 }
@@ -182,13 +218,15 @@ header nav .options .account-creation .login-button {
 header nav .options .account-creation .login-button:hover {
   border: 1px solid #fff;
   background-color: transparent;
-  color: #ff3d54;
 }
 
 header nav .options .account-creation .signup-button {
   border-radius: 25px;
   background-color: #fff;
   color: #ff3d54;
+  width: 135px;
+  font-family: 'ubuntu', sans-sreif;
+  font-size: 16px;
 }
 
 header nav .options .account-creation .signup-button:hover {
@@ -228,12 +266,15 @@ header .bloger-intro .get-info {
   display: flex;
   width: 26%;
   height: 50px;
+  gap: 17px;
+}
+
+header .bloger-intro .get-info button {
+  width: 136px;
+  margin: 0;
 }
 
 header .bloger-intro .get-info .start-for-free {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
   border-radius: 25px;
   font-size: 18px;
   padding: 0;
@@ -247,9 +288,6 @@ header .bloger-intro .get-info .start-for-free:hover {
 }
 
 header .bloger-intro .get-info .learn-more {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
   border-radius: 25px;
   font-size: 18px;
   padding: 0;
@@ -438,12 +476,15 @@ main .section3 .tools .content > div {
 }
 
 main .section3 .tools .content > div h3 {
+  font-family: 'ubuntu', sans-sreif;
   font-size: 29px;
   margin: 0 0 28px 0px;
   color: #1f3f5b;
+  letter-spacing: -1.2px;
 }
 
 main .section3 .tools .content > div p {
+  font-family: 'ubuntu', sans-sreif;
   line-height: 28px;
   letter-spacing: 0.3px;
   color: #4b5862;
@@ -463,28 +504,39 @@ footer .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 77%;
-  gap: 196px;
-  margin-right: 175px;
+  width: 79%;
+  gap: 185px;
   padding: 73px 9px 66px 0;
 }
 
 footer .wrapper .footer-logo {
   min-width: 100px;
+  margin-left: 13px;
 }
 
-footer .wrapper .footer-options p {
+footer .wrapper .footer-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 57.6%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 178.7px;
+}
+
+footer .wrapper .footer-items .footer-options p {
   margin-bottom: 36px;
 }
 
-footer .wrapper .footer-options span {
+footer .wrapper .footer-items .footer-options span {
   display: block;
   margin-bottom: 14px;
   color: #c8c8cb;
   cursor: pointer;
 }
 
-footer .wrapper .footer-options span:hover {
+footer .wrapper .footer-items .footer-options span:hover {
   text-decoration: underline;
 }
 
@@ -503,7 +555,7 @@ footer .wrapper .footer-options span:hover {
   header .ui.container nav {
     position: relative;
     margin: 0;
-    padding: 8px 8px 0;
+    padding: 0px 8px 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -644,6 +696,7 @@ footer .wrapper .footer-options span:hover {
     -webkit-box-shadow: unset;
             box-shadow: unset;
     border: unset;
+    padding-left: 0;
   }
   header .ui.container nav.open .options .header-info .nav-options .ui.dropdown .menu > .item {
     text-align: center;
@@ -673,12 +726,12 @@ footer .wrapper .footer-options span:hover {
     color: #4b5862;
   }
   header .ui.container nav.open .options .header-info .nav-options .header-nav .nav-item {
+    font-family: 'ubuntu', sans-sreif;
+    font-weight: 600;
     color: #1f3f5b;
     min-width: 100px;
-    padding: 33px 0 0px 19.1px;
+    padding: 31px 0 0px 19.1px;
     letter-spacing: 1.2px;
-    font-weight: 600;
-    font-family: 'ubuntu', sans-sreif;
   }
   header .ui.container nav.open .options .header-info .nav-options .header-nav .nav-item .dropdown.icon {
     -webkit-transition: all 0.4s ease-out;
@@ -727,13 +780,14 @@ footer .wrapper .footer-options span:hover {
   }
   header .ui.container .bloger-intro .get-info {
     width: 84%;
-    gap: 18px;
+    gap: 17px;
     height: 50px;
   }
   header .ui.container .bloger-intro .get-info button {
     border-radius: 50px;
     margin: 0;
     font-size: 16px;
+    letter-spacing: 0.7px;
   }
   main .section1 {
     margin-bottom: 268px;
@@ -904,6 +958,7 @@ footer .wrapper .footer-options span:hover {
   main .section3 .tools .content div {
     width: 100%;
     gap: 0;
+    margin-bottom: 40px;
   }
   main .section3 .tools .content div .sec3-component {
     display: -webkit-box;
@@ -919,18 +974,17 @@ footer .wrapper .footer-options span:hover {
     text-align: center;
   }
   main .section3 .tools .content div .sec3-component h3 {
-    letter-spacing: -0.2px;
     margin-left: 4.8px;
-    margin-bottom: 21px;
+    margin-bottom: 24.5px;
   }
   main .section3 .tools .content div .sec3-component p {
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
     margin-left: 9.5px;
-    width: 85.5%;
-    line-height: 29px;
+    width: 86.7%;
+    line-height: 28px;
   }
   main .section3 .tools .content div .summary {
-    margin-bottom: 62px;
+    margin-bottom: 36px;
   }
   footer .wrapper {
     -webkit-box-orient: vertical;
@@ -952,11 +1006,21 @@ footer .wrapper .footer-options span:hover {
     width: 27%;
     margin: 0 0 74px 10px;
   }
-  footer .wrapper .footer-options {
+  footer .wrapper .footer-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .wrapper .footer-items .footer-options {
     letter-spacing: 0.7px;
     margin: 0 0 35px 12px;
   }
-  footer .wrapper > div {
+  footer .wrapper .footer-items > div {
     width: 105px;
   }
 }
