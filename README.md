@@ -4,8 +4,8 @@
 
 This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-- [Solution URL](https://www.frontendmentor.io/solutions/clipboard-landing-page-EsPPjGOtH)
-- [Live Site URL](https://clipboard-landing-page-omarmo.vercel.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/blogr-landing-page-vZDgmHZ83)
+- [Live Site URL](https://bloger-landing-page.vercel.app/)
 
 ## Table of contents
 

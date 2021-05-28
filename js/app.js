@@ -19,10 +19,4 @@ navToggler.addEventListener('click', () => {
   nav.classList.toggle('open');
 
   isOpen = !isOpen;
-
-  // if ((navToggler.src = '/images/icon-hamburger.svg')) {
-  //   navToggler.src = '/images/icon-close.svg';
-  // } else {
-  //   navToggler.src = '/images/icon-hamburger.svg';
-  // }
 });
