@@ -7,16 +7,10 @@ dropdowns.dropdown(controlDropdown());
 
 onresize = () => dropdowns.dropdown(controlDropdown());
 
-const navToggler = document.querySelector('.nav-toggler');
+const navToggler = document.querySelector('.humburger');
 const nav = document.querySelector('nav');
 
 let isOpen = false;
 navToggler.addEventListener('click', () => {
-  navToggler.src = isOpen
-    ? '/images/icon-hamburger.svg'
-    : '/images/icon-close.svg';
-
   nav.classList.toggle('open');
-
-  isOpen = !isOpen;
 });

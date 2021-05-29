@@ -566,78 +566,69 @@ footer .wrapper .footer-items .footer-options span:hover {
   header .ui.container nav .humburger {
     position: relative;
     display: block;
-    -webkit-animation: navClose 0.6s ease 1;
-            animation: navClose 0.6s ease 1;
+    width: 30px;
+  }
+  header .ui.container nav .humburger .top-line {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    margin-bottom: 0px;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  header .ui.container nav .humburger .bottom-line {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #fff;
+    border: 1px solid #fff;
   }
   header .ui.container nav .options {
     display: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0;
   }
-  @-webkit-keyframes optionsSlide {
+  @-webkit-keyframes slide {
     0% {
-      top: -100px;
-    }
-    50% {
-      top: 0px;
+      opacity: 0%;
     }
     100% {
-      top: calc(100% + 26px);
+      opacity: 100%;
     }
   }
-  @keyframes optionsSlide {
+  @keyframes slide {
     0% {
-      top: -100px;
-    }
-    50% {
-      top: 0px;
+      opacity: 0%;
     }
     100% {
-      top: calc(100% + 26px);
-    }
-  }
-  @-webkit-keyframes navOpen {
-    0% {
-      top: -100px;
-    }
-    100% {
-      top: 0;
-    }
-  }
-  @keyframes navOpen {
-    0% {
-      top: -100px;
-    }
-    100% {
-      top: 0;
-    }
-  }
-  @-webkit-keyframes navClose {
-    0% {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes navClose {
-    0% {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+      opacity: 100%;
     }
   }
   header .ui.container nav.open .humburger {
     display: block;
-    -webkit-animation: navOpen 0.6s ease 1;
-            animation: navOpen 0.6s ease 1;
+  }
+  header .ui.container nav.open .humburger .top-line {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-bottom: -9.02px;
+  }
+  header .ui.container nav.open .humburger .bottom-line {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   header .ui.container nav.open .options {
-    -webkit-animation: slide 0.3s ease 1;
-            animation: slide 0.3s ease 1;
+    -webkit-animation: slide 0.5s;
+            animation: slide 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -474,55 +474,72 @@ footer {
         .humburger {
           position: relative;
           display: block;
-          animation: navClose 0.6s ease 1;
+          width: 30px;
+
+          .top-line {
+            transition: all 0.3s ease;
+            transform: rotate(0);
+            margin-bottom: 0px;
+            color: #fff;
+            border: 1px solid #fff;
+          }
+
+          .bottom-line {
+            transform: rotate(0);
+            transition: all 0.3s ease;
+            color: #fff;
+            border: 1px solid #fff;
+          }
         }
 
         .options {
           display: none;
+          transition: all 0.5s;
+          opacity: 0;
         }
 
-        @keyframes optionsSlide {
+        @keyframes slide {
           0% {
-            top: -100px;
-          }
-
-          50% {
-            top: 0px;
+            opacity: 0%;
           }
 
           100% {
-            top: calc(100% + 26px);
+            opacity: 100%;
           }
         }
+        // @keyframes slideClose {
+        //   0% {
+        //     opacity: 100%;
+        //     transform: scale(1);
+        //   }
 
-        @keyframes navOpen {
-          0% {
-            top: -100px;
-          }
-
-          100% {
-            top: 0;
-          }
-        }
-
-        @keyframes navClose {
-          0% {
-            transform: rotate(180deg);
-          }
-
-          100% {
-            transform: rotate(360deg);
-          }
-        }
+        //   100% {
+        //     top: -500px;
+        //     left: 100%;
+        //     opacity: 0%;
+        //     transform: scale(0);
+        //   }
+        // }
 
         &.open {
           .humburger {
             display: block;
-            animation: navOpen 0.6s ease 1;
+            .top-line {
+              transition: all 0.3s ease;
+              transform: rotate(-45deg);
+              margin-bottom: -9.02px;
+            }
+
+            .bottom-line {
+              transform: rotate(45deg);
+              transition: all 0.3s ease;
+            }
           }
 
           .options {
-            animation: slide 0.3s ease 1;
+            animation: slide 0.5s;
+            transition: all 0.5s;
+            opacity: 100%;
             display: flex;
             flex-direction: column;
             justify-content: stretch;
