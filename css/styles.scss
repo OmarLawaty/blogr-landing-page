@@ -487,6 +487,7 @@ footer {
           .middle-line {
             opacity: 100%;
             border: 1px solid #fff;
+            color: #fff;
             transition: all 0.5s ease;
           }
 
@@ -521,7 +522,7 @@ footer {
             .top-line {
               transition: all 0.3s ease;
               transform: rotate(-45deg);
-              margin-bottom: -18.12px;
+              margin-bottom: -20px;
             }
 
             .middle-line {
