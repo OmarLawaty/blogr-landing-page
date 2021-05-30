@@ -484,9 +484,16 @@ footer {
             border: 1px solid #fff;
           }
 
+          .middle-line {
+            opacity: 100%;
+            border: 1px solid #fff;
+            transition: all 0.5s ease;
+          }
+
           .bottom-line {
             transform: rotate(0);
             transition: all 0.3s ease;
+
             color: #fff;
             border: 1px solid #fff;
           }
@@ -507,19 +514,6 @@ footer {
             opacity: 100%;
           }
         }
-        // @keyframes slideClose {
-        //   0% {
-        //     opacity: 100%;
-        //     transform: scale(1);
-        //   }
-
-        //   100% {
-        //     top: -500px;
-        //     left: 100%;
-        //     opacity: 0%;
-        //     transform: scale(0);
-        //   }
-        // }
 
         &.open {
           .humburger {
@@ -527,7 +521,12 @@ footer {
             .top-line {
               transition: all 0.3s ease;
               transform: rotate(-45deg);
-              margin-bottom: -9.02px;
+              margin-bottom: -18.12px;
+            }
+
+            .middle-line {
+              opacity: 0;
+              transition: all 0.3s ease;
             }
 
             .bottom-line {

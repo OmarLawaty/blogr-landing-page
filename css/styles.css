@@ -577,6 +577,12 @@ footer .wrapper .footer-items .footer-options span:hover {
     color: #fff;
     border: 1px solid #fff;
   }
+  header .ui.container nav .humburger .middle-line {
+    opacity: 100%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
   header .ui.container nav .humburger .bottom-line {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -615,7 +621,12 @@ footer .wrapper .footer-items .footer-options span:hover {
     transition: all 0.3s ease;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    margin-bottom: -9.02px;
+    margin-bottom: -18.12px;
+  }
+  header .ui.container nav.open .humburger .middle-line {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   header .ui.container nav.open .humburger .bottom-line {
     -webkit-transform: rotate(45deg);
