@@ -276,7 +276,7 @@ header .bloger-intro .get-info button {
 
 header .bloger-intro .get-info .start-for-free {
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0;
   background-color: #fff;
   color: #ff3d54;
@@ -574,45 +574,151 @@ footer .wrapper .footer-items .footer-options span:hover {
     -webkit-transform: rotate(0);
             transform: rotate(0);
     margin-bottom: 0px;
-    color: #fff;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid transparent;
   }
   header .ui.container nav .humburger .middle-line {
     opacity: 100%;
     border: 1px solid #fff;
-    color: #fff;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    background-color: #fff;
+    -webkit-transition: all 0transparent ease;
+    transition: all 0transparent ease;
   }
   header .ui.container nav .humburger .bottom-line {
     -webkit-transform: rotate(0);
             transform: rotate(0);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: #fff;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid transparent;
   }
   header .ui.container nav .options {
-    display: none;
+    position: absolute;
+    visibility: hidden;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 95%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    max-height: 800px;
+    background-color: #fff;
+    border-radius: 5px;
+    top: calc(-100% - 26px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0%;
-    }
-    100% {
-      opacity: 100%;
-    }
+  header .ui.container nav .options .header-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 84%;
+    min-width: unset;
+    border-bottom: 1px solid #c8c8cb;
+    padding-bottom: 22px;
   }
-  @keyframes slide {
-    0% {
-      opacity: 0%;
-    }
-    100% {
-      opacity: 100%;
-    }
+  header .ui.container nav .options .header-info .header-logo {
+    min-width: 82px;
+    margin-left: 8px;
+  }
+  header .ui.container nav .options .header-info .nav-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .ui.container nav .options .header-info .nav-options .ui.dropdown .menu {
+    position: initial;
+    width: 100%;
+    margin-top: 23px;
+    background-color: rgba(200, 200, 203, 0.3);
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    border: unset;
+    padding-left: 0;
+  }
+  header .ui.container nav .options .header-info .nav-options .ui.dropdown .menu > .item {
+    text-align: center;
+    padding: 12px 8px 12px 12px !important;
+    letter-spacing: 0px;
+    color: #4b5862;
+    font-weight: 600;
+    font-family: 'ubuntu', sans-sreif;
+    font-size: 15px;
+  }
+  header .ui.container nav .options .header-info .nav-options .header-nav {
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .ui.container nav .options .header-info .nav-options .header-nav.active.visible .nav-item {
+    text-decoration: none;
+    color: #4b5862;
+  }
+  header .ui.container nav .options .header-info .nav-options .header-nav .nav-item {
+    font-family: 'ubuntu', sans-sreif;
+    font-weight: 600;
+    color: #1f3f5b;
+    min-width: 100px;
+    padding: 31px 0 0px 19.1px;
+    letter-spacing: 1.2px;
+  }
+  header .ui.container nav .options .header-info .nav-options .header-nav .nav-item .dropdown.icon {
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
+    height: auto;
+  }
+  header .ui.container nav .options .account-creation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px 0 33px;
+    gap: 7px;
+  }
+  header .ui.container nav .options .account-creation button {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  header .ui.container nav .options .account-creation .login-button {
+    border: 1px solid transparent;
+    font-family: 'overpass', sans-serif;
+    color: #1f3f5b;
+  }
+  header .ui.container nav .options .account-creation .signup-button {
+    height: 48px;
+    width: 137px;
+    margin-left: 4px;
+    color: #fff;
+    background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background: linear-gradient(to right, #ff8f70, #ff3d54);
   }
   header .ui.container nav.open .humburger {
     display: block;
@@ -636,136 +742,9 @@ footer .wrapper .footer-items .footer-options span:hover {
     transition: all 0.3s ease;
   }
   header .ui.container nav.open .options {
-    -webkit-animation: slide 0.5s;
-            animation: slide 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
     opacity: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
     top: calc(100% + 26px);
-    left: 50%;
-    width: 95%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    max-height: 800px;
-    background-color: #fff;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-    border-radius: 5px;
-  }
-  header .ui.container nav.open .options .header-info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 84%;
-    min-width: unset;
-    border-bottom: 1px solid #c8c8cb;
-    padding-bottom: 22px;
-  }
-  header .ui.container nav.open .options .header-info .header-logo {
-    min-width: 82px;
-    margin-left: 8px;
-  }
-  header .ui.container nav.open .options .header-info .nav-options {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header .ui.container nav.open .options .header-info .nav-options .ui.dropdown .menu {
-    position: initial;
-    width: 100%;
-    margin-top: 23px;
-    background-color: rgba(200, 200, 203, 0.3);
-    -webkit-box-shadow: unset;
-            box-shadow: unset;
-    border: unset;
-    padding-left: 0;
-  }
-  header .ui.container nav.open .options .header-info .nav-options .ui.dropdown .menu > .item {
-    text-align: center;
-    padding: 12px 8px 12px 12px !important;
-    letter-spacing: 0px;
-    color: #4b5862;
-    font-weight: 600;
-    font-family: 'ubuntu', sans-sreif;
-    font-size: 15px;
-  }
-  header .ui.container nav.open .options .header-info .nav-options .header-nav {
-    width: 100%;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header .ui.container nav.open .options .header-info .nav-options .header-nav.active.visible .nav-item {
-    text-decoration: none;
-    color: #4b5862;
-  }
-  header .ui.container nav.open .options .header-info .nav-options .header-nav .nav-item {
-    font-family: 'ubuntu', sans-sreif;
-    font-weight: 600;
-    color: #1f3f5b;
-    min-width: 100px;
-    padding: 31px 0 0px 19.1px;
-    letter-spacing: 1.2px;
-  }
-  header .ui.container nav.open .options .header-info .nav-options .header-nav .nav-item .dropdown.icon {
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-    text-decoration: none;
-    height: auto;
-  }
-  header .ui.container nav.open .options .account-creation {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 20px 0 33px;
-    gap: 7px;
-  }
-  header .ui.container nav.open .options .account-creation button {
-    font-size: 16px;
-    font-weight: 700;
-  }
-  header .ui.container nav.open .options .account-creation .login-button {
-    border: 1px solid transparent;
-    font-family: 'overpass', sans-serif;
-    color: #1f3f5b;
-  }
-  header .ui.container nav.open .options .account-creation .signup-button {
-    height: 48px;
-    width: 137px;
-    margin-left: 4px;
-    color: #fff;
-    background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
-    background: linear-gradient(to right, #ff8f70, #ff3d54);
+    visibility: visible;
   }
   header .ui.container .bloger-intro {
     height: unset;

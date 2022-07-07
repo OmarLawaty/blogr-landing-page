@@ -223,7 +223,7 @@ header {
 
       .start-for-free {
         border-radius: 25px;
-        font-size: 18px;
+        font-size: 16px;
         padding: 0;
         background-color: #fff;
         color: hsl(353, 100%, 62%);
@@ -253,8 +253,7 @@ header {
 
 main {
   .section1 {
-    background: url(/images/illustration-editor-desktop.svg) no-repeat
-      calc(100% + 275px) 98%;
+    background: url(/images/illustration-editor-desktop.svg) no-repeat calc(100% + 275px) 98%;
     min-height: 955px;
     margin-bottom: 55px;
     width: 100%;
@@ -309,8 +308,7 @@ main {
   }
 
   .section2 {
-    background: url(/images/bg-pattern-circles.svg) no-repeat -215px 82%,
-      linear-gradient(to right, #2c2d3f, #3f4164);
+    background: url(/images/bg-pattern-circles.svg) no-repeat -215px 82%, linear-gradient(to right, #2c2d3f, #3f4164);
     height: 400px;
     width: 100%;
     border-radius: 0 100px;
@@ -480,39 +478,135 @@ footer {
             transition: all 0.3s ease;
             transform: rotate(0);
             margin-bottom: 0px;
-            color: #fff;
-            border: 1px solid #fff;
+            background-color: #fff;
+            border: 1px solid transparent;
           }
 
           .middle-line {
             opacity: 100%;
             border: 1px solid #fff;
-            color: #fff;
-            transition: all 0.5s ease;
+            background-color: #fff;
+            transition: all 0transparent ease;
           }
 
           .bottom-line {
             transform: rotate(0);
             transition: all 0.3s ease;
 
-            color: #fff;
-            border: 1px solid #fff;
+            background-color: #fff;
+            border: 1px solid transparent;
           }
         }
 
         .options {
-          display: none;
+          position: absolute;
+          visibility: hidden;
           transition: all 0.5s;
           opacity: 0;
-        }
+          flex-direction: column;
+          justify-content: stretch;
+          align-items: center;
+          width: 95%;
+          height: max-content;
+          max-height: 800px;
+          background-color: #fff;
+          border-radius: 5px;
+          top: calc(-100% - 26px);
+          left: 50%;
+          transform: translateX(-50%);
 
-        @keyframes slide {
-          0% {
-            opacity: 0%;
+          .header-info {
+            flex-direction: column;
+            width: 84%;
+            min-width: unset;
+            border-bottom: 1px solid hsl(240, 2%, 79%);
+            padding-bottom: 22px;
+
+            .header-logo {
+              min-width: 82px;
+              margin-left: 8px;
+            }
+
+            .nav-options {
+              flex-direction: column;
+              width: 100%;
+              align-items: center;
+
+              .ui.dropdown .menu {
+                position: initial;
+                width: 100%;
+                margin-top: 23px;
+                background-color: hsla(240, 2%, 79%, 0.3);
+                box-shadow: unset;
+                border: unset;
+                padding-left: 0;
+
+                & > .item {
+                  text-align: center;
+                  padding: 12px 8px 12px 12px !important;
+                  letter-spacing: 0px;
+                  color: #4b5862;
+                  font-weight: 600;
+                  font-family: 'ubuntu', sans-sreif;
+                  font-size: 15px;
+                }
+              }
+
+              .header-nav {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &.active.visible {
+                  .nav-item {
+                    text-decoration: none;
+                    color: hsl(207, 13%, 34%);
+                  }
+                }
+
+                .nav-item {
+                  font-family: 'ubuntu', sans-sreif;
+                  font-weight: 600;
+                  color: hsl(208, 49%, 24%);
+                  min-width: 100px;
+                  padding: 31px 0 0px 19.1px;
+                  letter-spacing: 1.2px;
+
+                  .dropdown.icon {
+                    transition: all 0.4s ease-out;
+                    text-decoration: none;
+                    height: auto;
+                  }
+                }
+              }
+            }
           }
 
-          100% {
-            opacity: 100%;
+          .account-creation {
+            flex-direction: column;
+            margin: 20px 0 33px;
+            gap: 7px;
+
+            button {
+              font-size: 16px;
+              font-weight: 700;
+            }
+
+            .login-button {
+              border: 1px solid transparent;
+              font-family: 'overpass', sans-serif;
+              color: hsl(208, 49%, 24%);
+            }
+
+            .signup-button {
+              height: 48px;
+              width: 137px;
+              margin-left: 4px;
+              color: #fff;
+              background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+            }
           }
         }
 
@@ -537,120 +631,9 @@ footer {
           }
 
           .options {
-            animation: slide 0.5s;
-            transition: all 0.5s;
             opacity: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: stretch;
-            align-items: center;
-            position: absolute;
             top: calc(100% + 26px);
-            left: 50%;
-            width: 95%;
-            height: max-content;
-            max-height: 800px;
-            background-color: #fff;
-            transform: translate(-50%);
-            border-radius: 5px;
-
-            .header-info {
-              flex-direction: column;
-              width: 84%;
-              min-width: unset;
-              border-bottom: 1px solid hsl(240, 2%, 79%);
-              padding-bottom: 22px;
-
-              .header-logo {
-                min-width: 82px;
-                margin-left: 8px;
-              }
-
-              .nav-options {
-                flex-direction: column;
-                width: 100%;
-                align-items: center;
-
-                .ui.dropdown .menu {
-                  position: initial;
-                  width: 100%;
-                  margin-top: 23px;
-                  background-color: hsla(240, 2%, 79%, 0.3);
-                  box-shadow: unset;
-                  border: unset;
-                  padding-left: 0;
-
-                  & > .item {
-                    text-align: center;
-                    padding: 12px 8px 12px 12px !important;
-                    letter-spacing: 0px;
-                    color: #4b5862;
-                    font-weight: 600;
-                    font-family: 'ubuntu', sans-sreif;
-                    font-size: 15px;
-                  }
-                }
-
-                .header-nav {
-                  width: 100%;
-                  text-align: center;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-
-                  &.active.visible {
-                    .nav-item {
-                      text-decoration: none;
-                      color: hsl(207, 13%, 34%);
-                    }
-                  }
-
-                  .nav-item {
-                    font-family: 'ubuntu', sans-sreif;
-                    font-weight: 600;
-                    color: hsl(208, 49%, 24%);
-                    min-width: 100px;
-                    padding: 31px 0 0px 19.1px;
-                    letter-spacing: 1.2px;
-
-                    .dropdown.icon {
-                      transition: all 0.4s ease-out;
-                      text-decoration: none;
-                      height: auto;
-                    }
-                  }
-                }
-              }
-            }
-
-            .account-creation {
-              flex-direction: column;
-              margin: 20px 0 33px;
-              gap: 7px;
-
-              button {
-                font-size: 16px;
-                font-weight: 700;
-              }
-
-              .login-button {
-                border: 1px solid transparent;
-                font-family: 'overpass', sans-serif;
-                color: hsl(208, 49%, 24%);
-              }
-
-              .signup-button {
-                height: 48px;
-                width: 137px;
-                margin-left: 4px;
-                color: #fff;
-                background: linear-gradient(
-                  to right,
-                  hsl(13, 100%, 72%),
-                  hsl(353, 100%, 62%)
-                );
-              }
-            }
+            visibility: visible;
           }
         }
       }
